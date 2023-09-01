@@ -1,8 +1,13 @@
-fecha = str(input("Ingresar fecha: ").lower())
+var = input("Ingresar fecha en formato dia, DD/MM: ").lower()
+
+fecha_div = var.split(",")
+fecha = fecha_div[0].lower()
+dd_mm = fecha_div[1].split("/")
+
 if fecha=="lunes" or fecha=="martes" or fecha=="miercoles" or fecha=="jueves" or fecha=="viernes":
-    dia = int(input("Ingresar el numero del dia: "))
+    dia = int(dd_mm[0])
     if dia>0 and dia<32:
-        mes = int(input("Ingresar el mes: "))
+        mes = int(dd_mm[1])
         if mes>0 and mes<13:
 
             if fecha=="lunes" or fecha=="martes" or fecha=="miercoles":

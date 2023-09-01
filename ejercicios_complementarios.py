@@ -67,5 +67,5 @@ nombre_minuscula = nombre_mayuscula.swapcase()
 print("15) Nombre en minuscula:",nombre_minuscula)
 
 #ejercicio 16
-nombre_minuscula2 = nombre_mayuscula.capitalize ()
+nombre_minuscula2 = nombre_mayuscula.title ()
 print("16) nombre en minuscula",nombre_minuscula2)

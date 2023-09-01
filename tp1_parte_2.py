@@ -162,7 +162,7 @@ print("")
 
 print("Ejercicio 18")
 cena = float(input("Ingrese el valor de la cena: "))
-total = cena + (cena * 0.62) + (cena * .1)
+total = cena + (cena * 0.062) + (cena * .1)
 print("El valor total es:",total)
 
 print("")
@@ -176,10 +176,10 @@ print(fecha, "/", mes, "/", año)
 print("")
 
 print("Ejercicio 20")
-import datetime
-fecha_nac = input('Ingrese su fecha de nacimiento en formato dd/mm/yyyy: ')
-transformar_fecha = datetime.datetime.strptime(fecha_nac,"%d/%m/%Y" )
-print(transformar_fecha.strftime('%d%m%Y'))
+fecha_nac = int(input('Ingrese su dia de nacimiento: ') 
+                + input('Ingrese su mes de nacimiento: ')
+                + input('Ingrese su año de nacimiento: '))
+print(fecha_nac)
 
 print("")
 
