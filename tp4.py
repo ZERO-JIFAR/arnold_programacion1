@@ -14,10 +14,9 @@ while x <= 30:
 print("")
 
 print("Ejercicio 1")
-line=" "
-while line != "":
+while True:
     line = input("Ingrese una palabra o frase (espacio para salir): ").upper()
-    if line == "":
+    if line == " ":
         break
     print(line)
 
@@ -28,7 +27,7 @@ op = "D"
 ac = 0
 while op != "D" or op != "R":
     op = input("Presiona D y el monto para ingresar dinero o R y el monto para retirar (espacio para salir): ").upper()
-    if op=="":
+    if op==" ":
         break
     elif op[0]== "D":
         split_str = op.split()
@@ -45,9 +44,8 @@ print("Su saldo es de:",ac)
 print("")
 
 print("Ejercicio 3")
-num=1
 acc=0
-while num > 0:
+while True:
     num = int(input("Ingrese un numero mayor que 1 (0 para salir): "))
     if num == 0:
         break
@@ -102,8 +100,7 @@ else:
 print("")
 
 print("Ejercicio 7")
-choice=10
-while choice>0:
+while True:
     print("A donde quiere viajar?: ")
     print("1 - Rusia")
     print("2 - EEUU")

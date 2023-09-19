@@ -15,19 +15,25 @@ print("")
 print("Ejercicio 3")
 num = int(input("Ingrese un número positivo: "))
 list_num=[]
-for num in range(1,num+1,2):
-    list_num.append(num)
-print(list_num)
+if num > 0:
+    for num in range(1,num+1,2):
+        list_num.append(num)
+    print(list_num)
+else:
+    print("No ingreso un numero positivo")
 
 print("")
 
 print("Ejercicio 4")
 number = int(input("Ingrese un número positivo: "))
-for i in range(number, -1, -1):
-    if i != 0:
-        print(i, end= ",")
-    else:
-        print(i)
+if number > 0:
+    for i in range(number, -1, -1):
+        if i != 0:
+            print(i, end= ",")
+        else:
+            print(i)
+else:
+    print("No ingreso un numero positivo")
 
 print("")
 
