@@ -17,11 +17,11 @@ while True:
         total+=cant*200
         print("")
     elif prod == 3:
-        cant=int(input("Cauntos Kg de Carne molida vas a llevar? "))
+        cant=float(input("Cauntos Kg de Carne molida vas a llevar? "))
         total+=cant*150
         print("")
     elif prod == 4:
-        cant=int(input("Cauntos g de Oregano vas a llevar? "))
+        cant=float(input("Cauntos g de Oregano vas a llevar? "))
         total+=cant*10
         print("")
     else:
