@@ -45,17 +45,17 @@ tp5_fun.is_multiple(number1,number2)
 print("")
 
 print("Ejercicio 5")
-days = int(input("de cuantos dias desea saber la temperatura media"))
+days = int(input("De cuantos dias desea saber la temperatura media: "))
 for day in range(days):
     min_tem = int(input("Cual es la temperatura minima?: "))
     max_tem = int(input("Cual es la temperatura maxima?: "))
-    print("la temperatura media es ",tp5_fun.temperature_middle(min_tem, max_tem),"º")
+    print("La temperatura media es:",tp5_fun.temperature_middle(min_tem, max_tem),"º")
 
 print("")
 
 print("Ejercicio 6")
-sentence = input("INGRESE FRASE: ")
-print("la frase separada es ",tp5_fun.separator(sentence))
+sentence = input("Ingrese una frase: ")
+print("La frase separada es:",tp5_fun.separator(sentence))
 
 print("")
 
@@ -101,17 +101,22 @@ while True:
 print("")
 
 print("Ejercicio 11")
-#def multiplos1(num1):
-    
-#num1=int(input("Ingrese un numero: "))
-#num2=int(input("Ingrese otro numero: "))
-#list=[1,2,3,4,5,6,7,8,9]
-#multiplos1=multiplos_num1(num1)
-#multiplos2=multiplos_num2(num2)
+numbers = [4,2,8,9,6]
+print("-- Primer lista --")
+for number in numbers:
+    print(number)
+new_numbers = tp5_fun.apply_function(tp5_fun.product, numbers) 
+print("-- Segunda lista --")
+for number in new_numbers:
+    print(number)
 
 print("")
 
 print("Ejercicio 12")
+phrase = input("Ingrese una frase: ")
+words = phrase.split(" ")
+keys = (tp5_fun.define_keys(words))
+print(tp5_fun.transform_dict(words))
 
 print("")
 
@@ -120,9 +125,10 @@ vector = []
 prompt = 1
 while (prompt >= 1 and prompt <= 3):
     prompt += 1
-    digit = input("Ingrese valor del vector")
+    print("Ingrese el",prompt-1,"° vector")
+    digit = int(input("Valor: "))
     vector.append(digit)
-print("El módulo del vector es: " , tp5_fun.vector_module(int(vector[0]), int(vector[1]), int(vector[2])))
+print("El módulo del vector es:" , tp5_fun.vector_module(int(vector[0]), int(vector[1]), int(vector[2])))
 
 print("")
 
@@ -150,10 +156,34 @@ while True:
 print("")
 
 print("Ejercicio 16")
-num = int(input("Ingrese un número entero "))
-digit = int(input("Ingrese un digito "))
+num = int(input("Ingrese un número entero: "))
+digit = int(input("Ingrese un digito: "))
 tp5_fun.frecuencia(num, digit)
 
 print("")
 
 print("Ejercicio 17")
+while True:
+    number = int(input('Ingrese un numero primo. Para salir, ingrese un no primo: '))
+    digit = int(input('Ingrese un dígito: '))
+    #Seccion para saber si el número primo ingresado es el más grande
+    major_number = 0
+    if number > major_number:
+        major_number = number
+    #Sección verificación números primos
+    counter = 0
+    for i in range(1,number+1):
+        if number % i == 0:
+            counter += 1
+    if counter==2:
+        print(number,'es primo')
+        print('La suma es:', tp5_fun.addiging_digits(number))
+        print('Las veces que se repite el dígito',digit,'son',tp5_fun.frecuency(number, digit),'veces')
+    else:
+        print("No es un número primo")
+    break                
+#Sacar el factorial del mayor primo ingresado
+factorial = 1
+for i in range (1, major_number + 1):
+    factorial *= 1
+print(f"El factorial de {major_number} es {factorial}")

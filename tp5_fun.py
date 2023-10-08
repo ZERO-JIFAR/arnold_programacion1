@@ -1,4 +1,5 @@
 import math
+
 #Ejercicio 1
 def document(dni) :
     if (len(dni)>=7 and len(dni)<=8):
@@ -23,8 +24,8 @@ def user_name (name1, name2, lastname):
     if (name2 == "0"):
         fullname = name1 + " " + lastname
     else:
-        fullname = name1 + ", " + name2 + ", " + lastname
-    return ("Nombre del usuario: " + fullname)
+        fullname = name1 + " " + name2 + " " + lastname
+    return ("Nombre del usuario:" + fullname)
 
 #Ejercicio 4
 def is_multiple(num1,num2):
@@ -33,12 +34,12 @@ def is_multiple(num1,num2):
     elif num2 % num1 == 0 and num1 % num2 != 0:
         print(num2,"es multiplo de",num1)
     elif num2 % num1 == 0 and num1 % num2 == 0:
-        print("Son multiplos.")
+        print("Son multiplos")
     else:
-        print("No son multiplos.")
+        print("No son multiplos")
 def data_validation(num):
     if num<=0:
-        print("Ingrese un numero entero mayor a 0.")
+        print("Ingrese un numero entero mayor a 0")
         return False
     else:
         return True
@@ -67,10 +68,10 @@ def max_min(number_list):
 
 #Ejercicio 8
 def calculo_perim(n):
-    perimetro=2*n*math.pi
+    perimetro=round(2*n*math.pi,2)
     return perimetro
 def calculo_area(n):
-    area=(math.pi*n)**2
+    area=round((math.pi*n)**2,2)
     return area
 
 #Ejercicio 9
@@ -95,11 +96,27 @@ def total(shopping_dic):
     for i in range(number):
         total_with_discount += prices_list[i] - prices_list[i]*(num[i]/100)
         total += prices_list[i]
-    print("El total de la compra es: $", total,". Con el descuento aplicado es $", total_with_discount)
+    print("El total de la compra es: $",total,". Con el descuento aplicado es $", total_with_discount)
 
 #Ejercicio 11
+def apply_function(product, numbers):
+    result = []
+    for number in numbers:
+        result.append(product(number))
+    return result
+def product(element):
+    return element * 2
 
 #Ejercicio 12
+def define_keys(all_keys):
+    for sing_key in all_keys:
+        list_keys = [sing_key]
+    return(all_keys)
+def transform_dict(all_words):
+    dict_text = {}
+    for word in all_words:
+        dict_text [word] = len(word)
+    return(dict_text)
 
 #Ejercicio 13
 def vector_module (a,b,c):
@@ -129,7 +146,21 @@ def frecuencia(num, digit):
         if digit == num % 10:
             counter = counter + 1
         num = num // 10
-    print("Las veces que se repite ", digit, "  son ", counter, " veces.")
+    print("Las veces que se repite", digit, "son", counter, "veces")
 
 #Ejercicio 17
-
+def addiging_digits(number):
+    add_numbers = 0
+    while number > 0:
+        aux_number = number % 10
+        add_numbers = add_numbers + aux_number
+        number = number // 10
+    return add_numbers
+def frecuency(number, digit):
+                counter = 0
+                while number > 0:
+                    aux_number = number % 10
+                    if digit == aux_number:
+                        counter = counter + 1
+                    number = number // 10
+                return counter
