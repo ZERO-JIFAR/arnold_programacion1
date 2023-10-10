@@ -40,7 +40,15 @@ while tp5_fun.data_validation(number1) == False:
 number2 = int(input("Ingrese otro numero entero: "))
 while tp5_fun.data_validation(number2) == False:
     number2 = int(input("Ingrese otro numero entero: "))
-tp5_fun.is_multiple(number1,number2)
+multiple = tp5_fun.is_multiple(number1,number2)
+if multiple == number1:
+    print(number1,"es multiplo de",number2)
+elif multiple == number2:
+    print(number2,"es multiplo de",number1)
+elif multiple == True:
+    print("Son multiplos.")
+elif multiple == False:
+    print("No son multiplos.")
 
 print("")
 
@@ -66,7 +74,8 @@ while num!=0:
     print("Ingrese sucesivamente numeros enteros (0 para terminar).")
     num=int(input("Numero: "))
     numbers_list.append(num)
-tp5_fun.max_min(numbers_list)
+values = tp5_fun.max_min(numbers_list)
+print(f'El mayor número de la lista es {values[0]} y el menor es {values[1]}')
 
 print("")
 
@@ -80,6 +89,21 @@ print("Area:",area)
 print("")
 
 print("Ejercicio 9")
+attempts = 0
+while attempts <= 3:
+    username = input("Ingrese nombre de usuario: ")
+    password = input("Ingrese contraseña: ")
+    if tp5_fun.login(username, password, attempts) is True:
+        print("Inicio de sesión exitoso!")
+        break
+    else:
+        attempts = tp5_fun.login(username, password, attempts)
+        remaining_attempts = 3 - attempts
+        if remaining_attempts > 0:
+            print("Inicio de sesión fallido. Intentos restantes:", remaining_attempts)
+        else:
+            print("Se han agotado los intentos de inicio de sesión.")
+            break
 
 print("")
 
@@ -90,7 +114,8 @@ print(shopping_cart)
 while True:
     choise = input("Presione T para ver el total con el descuento aplicado y C para cancelar la compra: ").upper()
     if choise == 'T':
-        tp5_fun.total(shopping_cart)
+        total_list = tp5_fun.total(shopping_cart)
+        print(f'El total de la compra es: ${total_list[0]}. Con el descuento aplicado es ${total_list[1]}')
         break
     elif choise == 'C':
         print("Compra cancelada")

@@ -1,4 +1,3 @@
-
 from datetime import datetime
 
 #-----------------------------EJERCICIO 1------------------------------
@@ -186,5 +185,3 @@ def eliminate_member(members_dic):
         else:
             continue
     return '0'
-
-            

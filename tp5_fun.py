@@ -30,16 +30,16 @@ def user_name (name1, name2, lastname):
 #Ejercicio 4
 def is_multiple(num1,num2):
     if num1 % num2 == 0 and num2 % num1 != 0:
-        print(num1,"es multiplo de",num2)
+        return num1
     elif num2 % num1 == 0 and num1 % num2 != 0:
-        print(num2,"es multiplo de",num1)
+        return num2
     elif num2 % num1 == 0 and num1 % num2 == 0:
-        print("Son multiplos")
+        return True
     else:
-        print("No son multiplos")
+        return False
 def data_validation(num):
     if num<=0:
-        print("Ingrese un numero entero mayor a 0")
+        print("Ingrese un numero entero mayor a 0.")
         return False
     else:
         return True
@@ -64,7 +64,7 @@ def max_min(number_list):
             max_number = i
         elif i<min_number and i!=0:
             min_number = i
-    print("El mayor número de la lista es",max_number,"y el menor es",min_number)
+    return [max_number,min_number]
 
 #Ejercicio 8
 def calculo_perim(n):
@@ -75,12 +75,18 @@ def calculo_area(n):
     return area
 
 #Ejercicio 9
+def login(username, password, attempts):
+    if username == "usuario1" and password == "asdasd":
+        return True
+    else:
+        attempts += 1
+        return attempts  
 
 #Ejercicio 10
 def total(shopping_dic):
     prices_list=[]
     discount_list=[]
-    values_list=[]  
+    values_list=[]
     for i in shopping_dic.keys():
         prices_list.append(i)
     for i in shopping_dic.values():
@@ -96,7 +102,7 @@ def total(shopping_dic):
     for i in range(number):
         total_with_discount += prices_list[i] - prices_list[i]*(num[i]/100)
         total += prices_list[i]
-    print("El total de la compra es: $",total,". Con el descuento aplicado es $", total_with_discount)
+    return [total, total_with_discount]
 
 #Ejercicio 11
 def apply_function(product, numbers):
