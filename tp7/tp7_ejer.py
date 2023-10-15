@@ -1,6 +1,7 @@
 import tp7_fun
 
 list_num=tp7_fun.list_assem_num()
+list_word=tp7_fun.list_assem_word()
 
 print("")
 
@@ -13,7 +14,6 @@ print("")
 
 print("Ejercicio 2")
 print("Ordenamiento de selección")
-list_word=tp7_fun.list_assem_word()
 list_word2=list_word.copy()
 print("Palabras ordenadas alfabéticamente:", tp7_fun.selection_sort_words(list_word2))
 
@@ -37,11 +37,10 @@ else:
 
 print("")
 
-print("Ejercicio 4")
+print("Ejercicio 4.")
 print("Ordenamiento de inserción")
 list_word4=list_word.copy()
-tp7_fun.insertionSort(list_word4)
-print("Palabras ordenadas en orden ascendente segun su longitud:",list_word4)
+print("Palabras ordenadas en orden ascendente segun su longitud:",tp7_fun.ejer4(list_word4))
 
 print("")
 

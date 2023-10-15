@@ -4,9 +4,9 @@ def list_assem_num():
     list_num0=[]
     while True:
         p=int(input("Ingrese un numero (0 para salir): "))
-        list_num0.append(p)
         if p==0:
             break
+        list_num0.append(p)
     print (list_num0)
     return list_num0
 
@@ -23,6 +23,26 @@ def list_assem_word():
             print("Ingrese una palabra.")
     print (list_word0)
     return list_word0
+
+#busqueda lineal
+def linear_search(lista, elemento):
+    for i in range(len(lista)):
+        if lista[i] == elemento:
+            return i
+    return -1
+
+#busqueda binaria
+def binary_search(lista, elemento):
+    izquierda, derecha = 0, len(lista) - 1
+    while izquierda <= derecha:
+        medio = (izquierda + derecha) // 2
+        if lista[medio] == elemento:
+            return medio
+        elif lista[medio] < elemento:
+            izquierda = medio + 1
+        else:
+            derecha = medio - 1
+    return -1
 
 #1
 def ejer1(list_num1):
@@ -47,17 +67,15 @@ def selection_sort_words(list_word2):
 #3
 
 #4
-def insertionSort(li):
-    n = len(li)
-    if n <= 1:
-        return li
-    for i in range(1, n):
-        key = li[i]
-        j = i-1
-        while j >= 0 and len(key) < len(li[j]):
-            li[j+1] = li[j]
+def ejer4(strings):
+    for i in range(1, len(strings)):
+        key = strings[i]
+        j = i - 1
+        while j >= 0 and len(key) < len(strings[j]):
+            strings[j + 1] = strings[j]
             j -= 1
-        li[j+1] = key
+        strings[j + 1] = key
+    return strings
 
 #5
 def ejer5(list_num2):
