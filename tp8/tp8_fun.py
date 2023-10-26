@@ -43,6 +43,21 @@ def odd(num):
     else:
         return even(num-1)
 
+#5
+def greater_element(numbers_list, position,greater_number):
+    if position==len(numbers_list):
+        return greater_number
+    else:
+        if position == 0:
+            greater_number = numbers_list[0]
+            return greater_element(numbers_list,position+1,greater_number)
+        else:
+            if greater_number<numbers_list[position]:
+                greater_number = numbers_list[position]
+                return greater_element(numbers_list,position+1,greater_number)
+            else:
+                return greater_element(numbers_list,position+1,greater_number)
+
 #6
 def repeat(li,times,new_li):
     counter=len(li)
@@ -67,6 +82,21 @@ def mul(n,p,res=0):
             res=res+(p*n)
             n=n-1
             return mul(n,p,res)
+
+#8
+def pascal(n, k):
+    if k == 0 or k == n:
+        return 1
+    else:
+        return pascal(n - 1, k - 1) + pascal(n - 1, k)
+
+#9
+def combinations(lista, k, prefix=""):
+    if k == 0:
+        print(prefix)
+        return
+    for char in lista:
+        combinations(lista, k - 1, prefix + char)
 
 #10
 def sheet(paper,a=0,long=841,broad=1189):
