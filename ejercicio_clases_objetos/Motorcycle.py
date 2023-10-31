@@ -2,17 +2,7 @@ class Motorcycle:
     new_moto='nueva'
     engine=False
 
-    def _init_(self,
-        color,
-        tuition,
-        fuel_liters,
-        num_wheels,
-        brand,
-        model,
-        fabrication_date,
-        top_speed,
-        weight
-        ):
+    def _init_(self, color, tuition, fuel_liters, num_wheels, brand, model, fabrication_date, top_speed, weight):
         
         self.color=color
         self.tuition=tuition
@@ -37,3 +27,6 @@ class Motorcycle:
             print("El motor se ha detenido")
         else:
             print("El motor ya estaba detenido")
+
+    def check_price(self):
+        print(f'El precio de la moto {self.brand} {self.model} es de ${self.price}.')

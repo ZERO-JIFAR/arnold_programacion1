@@ -1,15 +1,30 @@
 from Motorcycle import Motorcycle
 
-my_motorcycle = Motorcycle('Azul','als 154', 10, 2,'Yamaha', 2000, 15/10/2000, 180, 85)
+moto1 = Motorcycle('Azul','jif 154', 10, 2,'Yamaha', 2000, 15/10/2000, 180, 175)
+moto2 = Motorcycle('Rojo','als 326', 10, 2,'Kawasaki', 1999, 25/12/1999, 200, 340)
 
-#Accedemos a los atributos del objeto
-print(f'Color: {my_motorcycle.color}, Modelo: {my_motorcycle.model}')
+print(f'Informacion de la moto {moto1.brand}, modelo{moto1.model}, color {moto1.color}, patente {moto1.tuition}, Cantidad de ruedas: {moto1.num_wheels}')
 
-#Creación dinámica de un atributo
-my_motorcycle.surname = 'Rigoni'
-print(f'Atributo creado dinámicamente: {my_motorcycle.surname}')
+#Motos nuevas
+print(f'Estado de la moto: {moto1.new_moto}')
 
-my_motorcycle.start()
-print(my_motorcycle.engine)
-my_motorcycle.stop()
-print(my_motorcycle.engine)
+#Metodos arrancar y detener
+moto1.start()
+print(moto1.engine)
+moto1.start()
+print(moto1.engine)
+moto1.stop()
+print(moto1.engine)
+moto1.stop()
+print(moto1.engine)
+
+#Litros y cantidad de ruedas
+print(f'Capasidad en Litros: {moto1.fuel_liters}, Cantidad de ruedas: {moto1.num_wheels}')
+
+#Creacion dinamica de un atributo
+moto1.price = 2200000
+print(f'El precio de la moto {moto1.brand} {moto1.model} es de ${moto1.price}')
+
+#Consultar precio desde metodo
+moto1.check_price()
+'''moto2.consultar_precio() Tira error porque no tiene ese valor definido'''
