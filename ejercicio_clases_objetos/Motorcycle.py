@@ -2,8 +2,7 @@ class Motorcycle:
     new_moto='nueva'
     engine=False
 
-    def _init_(self, color, tuition, fuel_liters, num_wheels, brand, model, fabrication_date, top_speed, weight):
-        
+    def __init__(self, color='', tuition='', fuel_liters=0, num_wheels=0, brand='', model=0, fabrication_date='', top_speed=0, weight=0):
         self.color=color
         self.tuition=tuition
         self.fuel_liters=fuel_liters
