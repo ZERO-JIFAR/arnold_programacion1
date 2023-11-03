@@ -17,4 +17,8 @@ for _ in range(6):
 # Dar formato y transformar la matriz (no importa si son mayusculas o minusculas)
 formatted_matrix = tp9_fun.format_input(matrix)
 
-tp9_fun.is_mutant(formatted_matrix)
+# Llama a la funcion que valida si es o no mutante
+if tp9_fun.is_mutant(formatted_matrix)==True:
+    print("Es mutante")
+else:
+    print("No es mutante")

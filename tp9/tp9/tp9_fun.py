@@ -61,16 +61,14 @@ def is_mutant(dna):
     total_count = horizontal_count + vertical_count + diagonal_count
 
     if total_count > 1:
-# Muetra la matriz con un formato mas lindo (pero como no lo piden lo comento :D )
+# Muetra la matriz con un formato mas limpio
 #        for row in dna:
 #            print(' '.join(row))
-        print("Es mutante")
-# Muestra la cantidad de secuencias encontradas (pero como no lo piden lo comento :D )
+# Muestra la cantidad de secuencias encontradas
 #        print(f"Se encontraron {total_count} secuencias de cuatro letras iguales")
         return True
     else:
-# Muetra la matriz con un formato mas lindo (pero como no lo piden lo comento :D )
+# Muetra la matriz con un formato mas limpio
 #        for row in dna:
 #            print(' '.join(row))
-        print("No es mutante")
         return False
