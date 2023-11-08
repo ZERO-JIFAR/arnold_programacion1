@@ -1,4 +1,4 @@
-import tp9_fun as tp9_fun
+import parcial2_fun as parcial2_fun
 
 # Ejemplo de no mutante
 #matrix = ['atgcga','cagtgc','ttattt','agacgg','gcgtca','tcactg']
@@ -15,10 +15,10 @@ for _ in range(6):
     matrix.append(row)
 
 # Dar formato y transformar la matriz (no importa si son mayusculas o minusculas)
-formatted_matrix = tp9_fun.format_input(matrix)
+formatted_matrix = parcial2_fun.format_input(matrix)
 
 # Llama a la funcion que valida si es o no mutante
-if tp9_fun.is_mutant(formatted_matrix)==True:
+if parcial2_fun.is_mutant(formatted_matrix)==True:
     print("Es mutante")
 else:
     print("No es mutante")
